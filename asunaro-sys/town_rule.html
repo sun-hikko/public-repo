@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>あすなろ町内会のルール</title>
+
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Yu Gothic","Meiryo",sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:10px;
+    line-height:1.8;
+    color:#333;
+}
+
+.page{
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
+    background:#fff;
+    padding:24px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    color:#0d6efd;
+    border-bottom:4px solid #0d6efd;
+    padding-bottom:12px;
+    margin-top:0;
+    font-size:clamp(1.5rem,4vw,2rem);
+}
+
+h2{
+    background:#eaf4ff;
+    padding:12px;
+    border-left:6px solid #0d6efd;
+    border-radius:6px;
+    font-size:clamp(1rem,3vw,1.3rem);
+    margin-top:28px;
+}
+
+.rule-box{
+    background:#fafafa;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:16px;
+    margin-top:12px;
+}
+
+.rule-box ul{
+    padding-left:22px;
+    margin-bottom:0;
+}
+
+.rule-box li{
+    margin-bottom:8px;
+}
+
+.point{
+    background:#fff8e1;
+    border-left:5px solid orange;
+    border-radius:6px;
+    padding:12px;
+    margin-top:12px;
+}
+
+.closing-message{
+    text-align:center;
+    margin-top:40px;
+    padding:20px;
+    background:#d1ffd1;
+    border-radius:10px;
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.footer{
+    text-align:center;
+    color:#666;
+    margin-top:30px;
+    font-size:0.9rem;
+}
+
+/* TOPへ戻るボタン */
+
+.top-btn{
+    position:fixed;
+    bottom:20px;
+    right:10px;
+
+    width:50px;
+    height:50px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#198754;
+    color:#fff;
+
+    font-size:20px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.top-btn:active{
+    transform:scale(.95);
+}
+
+/* スマホ対応 */
+
+@media (max-width:768px){
+
+    body{
+        padding:8px;
+    }
+
+    .page{
+        padding:16px;
+        border-radius:8px;
+    }
+
+    h1{
+        font-size:1.4rem;
+        line-height:1.4;
+    }
+
+    h2{
+        font-size:1.05rem;
+        padding:10px;
+    }
+
+    p,
+    li{
+        font-size:0.95rem;
+    }
+
+    .close-btn{
+        top:8px;
+        right:8px;
+        padding:8px 14px;
+        font-size:13px;
+    }
+
+    .top-btn{
+        width:45px;
+        height:45px;
+    }
+}
+
+@media (max-width:400px){
+
+    .page{
+        padding:12px;
+    }
+
+    h1{
+        font-size:1.2rem;
+    }
+
+    h2{
+        font-size:1rem;
+    }
+
+    p,
+    li{
+        font-size:0.9rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="top-btn" onclick="scrollToTop()">
+    ↑
+</button>
+
+<div class="page">
+
+    <h1>🏘️ あすなろ町内会のルールとマナー</h1>
+
+    <p>
+        この冊子は、地域の皆さまが安心して暮らせるよう、
+        町内会の基本的なルールをまとめたものです。
+        ご協力をお願いいたします。
+    </p>
+
+    <h2>👋 町内会とは？</h2>
+
+    <div class="rule-box">
+        <p>
+            町内会は地域の皆さまが協力して、
+            安全で住みやすい街づくりを行うための組織です。
+        </p>
+
+        <ul>
+            <li>防災活動</li>
+            <li>防犯活動</li>
+            <li>清掃活動</li>
+            <li>お祭り・イベント</li>
+            <li>回覧板による情報共有</li>
+        </ul>
+    </div>
+
+    <h2>📰 回覧板について</h2>
+
+    <div class="rule-box">
+        <p>
+            回覧板が届きましたら内容をご確認いただき、
+            できるだけ早く次の方へ回してください。
+        </p>
+
+        <div class="point">
+            <strong>ポイント</strong><br>
+            目安として2〜3日以内に回覧をお願いします。
+        </div>
+    </div>
+
+    <h2>🗑️ ごみ出しルール</h2>
+
+    <div class="rule-box">
+        <ul>
+            <li>決められた曜日に出す</li>
+            <li>分別を正しく行う</li>
+            <li>収集時間までに出す</li>
+            <li>収集後は出さない</li>
+        </ul>
+
+        <div class="point">
+            不法投棄やルール違反は近隣トラブルの原因になります。
+        </div>
+    </div>
+
+    <h2>🚗 駐車について</h2>
+
+    <div class="rule-box">
+        <ul>
+            <li>路上駐車は控えましょう</li>
+            <li>緊急車両の通行を妨げないようにしましょう</li>
+            <li>来客時も周辺住民へ配慮しましょう</li>
+        </ul>
+    </div>
+
+    <h2>🌳 公園・共有施設の利用</h2>
+
+    <div class="rule-box">
+        <ul>
+            <li>ごみは持ち帰る</li>
+            <li>設備を大切に使う</li>
+            <li>騒音に配慮する</li>
+            <li>利用後は整理整頓する</li>
+        </ul>
+    </div>
+
+    <h2>🔊 騒音について</h2>
+
+    <div class="rule-box">
+        <p>夜間や早朝は近隣への配慮をお願いします。</p>
+
+        <ul>
+            <li>大音量の音楽</li>
+            <li>長時間の工事音</li>
+            <li>深夜の大声</li>
+        </ul>
+
+        <p>などは周囲の迷惑になる場合があります。</p>
+    </div>
+
+    <h2>🔥 防災への協力</h2>
+
+    <div class="rule-box">
+        <ul>
+            <li>防災訓練への参加</li>
+            <li>避難場所の確認</li>
+            <li>非常持出品の準備</li>
+            <li>高齢者世帯への見守り</li>
+        </ul>
+    </div>
+
+    <h2>🤝 町内会活動への参加</h2>
+
+    <div class="rule-box">
+        <p>
+            清掃活動や地域イベントへの参加をお願いします。
+        </p>
+
+        <p>
+            すべてに参加する必要はありませんが、
+            可能な範囲でご協力いただけると地域のつながりが深まります。
+        </p>
+    </div>
+
+    <h2>📞 お問い合わせ</h2>
+
+    <div class="rule-box">
+        <p>
+            ご不明な点は町内会役員までお問い合わせください。
+        </p>
+
+        <p>
+            町内会長：〇〇 〇〇<br>
+            電話：000-0000-0000
+        </p>
+    </div>
+
+    <div class="closing-message">
+        😊 みんなで住みよい町をつくりましょう！
+    </div>
+
+    <div class="footer">
+        あすなろ町内会
+    </div>
+
+</div>
+
+<script>
+
+function scrollToTop(){
+
+    window.scrollTo({
+        top:0,
+        behavior:'smooth'
+    });
+}
+
+</script>
+
+</body>
+</html>
